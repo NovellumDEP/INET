@@ -3,21 +3,17 @@
 
 .footer {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.3s ease-in-out;
-  background-color: transparent;
-  background: #0a0a0a;
+  background-color: #0a0a0a;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* Removed problematic transition and positioning */
 }
 
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 60px 20px 30px 20px;
+  padding: 60px 20px 40px 20px; /* Increased bottom padding */
 }
 
 /* Top Section */
@@ -195,7 +191,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .footer-container {
-    padding: 40px 15px 20px 15px;
+    padding: 40px 15px 30px 15px; /* Increased bottom padding */
   }
 
   .footer-top {
@@ -213,6 +209,7 @@
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    padding-bottom: 20px; /* Added extra bottom padding */
   }
 
   .footer-certifications {
@@ -235,6 +232,10 @@
 }
 
 @media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 15px 25px 15px; /* Extra bottom padding for small screens */
+  }
+
   .footer-brand {
     justify-content: center;
     text-align: center;
@@ -259,14 +260,37 @@
   .novellum-link {
     font-size: 0.95rem;
   }
+
+  .footer-bottom {
+    padding-bottom: 25px; /* Extra bottom padding */
+  }
 }
 
-/* Enhanced mobile scrolling support */
-body {
+/* Fixed mobile scrolling support */
+html {
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
 }
 
-html, body {
-  touch-action: manipulation;
+body {
+  overflow-x: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y; /* Allow vertical scrolling */
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure proper viewport handling */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix for iOS Safari bottom bounce */
+@supports (-webkit-touch-callout: none) {
+  body {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
