@@ -252,7 +252,7 @@
   max-width: 300px;
 }
 
-/* Mobile Link Styles */
+/* Mobile Link Styles - FIXED */
 .nav-mobile-link {
   display: block;
   width: 100%;
@@ -270,22 +270,16 @@
   opacity: 0;
   transform: translateX(50px);
   animation: slideInLeft 0.6s ease forwards;
+  background: transparent; /* Ensure background is transparent */
+  box-shadow: none; /* Remove any box shadows */
+  outline: none; /* Remove outline */
+  -webkit-appearance: none; /* Remove webkit styling */
+  -moz-appearance: none; /* Remove firefox styling */
 }
 
+/* Remove the problematic pseudo-element */
 .nav-mobile-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.nav-mobile-link:hover::before {
-  left: 0;
+  display: none; /* Hide the grey gradient overlay */
 }
 
 .nav-mobile-link:hover {
@@ -299,7 +293,7 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Mobile CTA */
+/* Mobile CTA - FIXED */
 .nav-mobile-cta {
   display: block;
   width: 100%;
@@ -319,22 +313,15 @@
   opacity: 0;
   transform: translateY(30px);
   animation: slideInUp 0.6s ease forwards;
+  box-shadow: none; /* Remove any box shadows */
+  outline: none; /* Remove outline */
+  -webkit-appearance: none; /* Remove webkit styling */
+  -moz-appearance: none; /* Remove firefox styling */
 }
 
+/* Remove the problematic pseudo-element */
 .nav-mobile-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.nav-mobile-cta:hover::before {
-  left: 0;
+  display: none; /* Hide the grey overlay */
 }
 
 .nav-mobile-cta:hover {
