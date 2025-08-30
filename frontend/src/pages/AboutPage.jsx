@@ -27,6 +27,10 @@ const AboutPage = () => {
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll, { passive: true });
 
+    // Enhanced Intersection Observer for better mobile compatibility
+    const isMobile = window.innerWidth <= 768;
+    const threshold = isMobile ? 0.05 : 0.2; // Much lower threshold for mobile
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -36,20 +40,32 @@ const AboutPage = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { 
+        threshold: threshold,
+        rootMargin: isMobile ? '100px 0px -50px 0px' : '0px' // Add margin for mobile to trigger earlier
+      }
     );
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
+    // Fallback: trigger animation after a delay if intersection observer doesn't work
+    const fallbackTimer = setTimeout(() => {
+      if (!isVisible) {
+        console.log('Fallback animation trigger activated');
+        setIsVisible(true);
+      }
+    }, 2000); // Trigger after 2 seconds if not already visible
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      clearTimeout(fallbackTimer);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [isVisible]);
 
   // Calculate parallax transforms
   const backgroundTransform = `translateY(${scrollY * 0.25}px)`;

@@ -201,48 +201,81 @@
   margin: 0;
 }
 
-/* Stats Section - Fixed to stay in single row */
+/* EXACT SAME STATS STYLING AS ABOUT.CSS */
 .about-stats {
-  margin: 120px 0;
-  padding: 60px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 120px 0 3rem 0;
+  /* Ensure equal column widths */
+  grid-auto-columns: 1fr;
 }
 
 .stats-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  text-align: center;
-  width: 100%;
-  max-width: 1200px;
+  display: contents;
 }
 
 .stat-item {
+  /* FIXED DIMENSIONS - All badges will be exactly the same size */
+  width: 100%;
+  height: 140px;
+  min-height: 140px;
+  max-height: 140px;
+  
+  /* Content positioning */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  
+  /* Styling */
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  /* Prevent content from affecting size */
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
 }
 
 .stat-number {
-  font-size: 3rem;
+  display: block;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  /* Prevent text from affecting container size */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .stat-label {
   font-size: 1rem;
-  color: #b0b0b0;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  text-align: center;
-  max-width: 150px;
+  /* Prevent text from affecting container size */
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* Mission Section */
@@ -291,6 +324,19 @@
   object-fit: contain;
 }
 
+/* Performance optimizations */
+.stat-item {
+  will-change: transform;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .stat-item {
+    transition: none;
+    animation: none;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 1024px) {
   .about-story {
@@ -312,28 +358,34 @@
     gap: 40px;
   }
 
-  /* Keep stats in single row on tablet */
-  .stats-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    max-width: 1000px;
-    flex-wrap: nowrap;
+  .about-stats {
+    gap: 1.5rem;
   }
-
+  
+  .stat-item {
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
+    padding: 1.25rem;
+  }
+  
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
-
+  
   .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 768px) {
   .about-hero {
-    height: 80vh;
+    height: 65vh;
+    min-height: 75vh;
+  }
+
+  .about-hero-container {
+    padding: 100px 15px 60px 15px;
   }
 
   .about-main {
@@ -357,7 +409,7 @@
   }
 
   .about-stats {
-    margin: 80px 0;
+    margin: 80px 0 2rem 0;
   }
 
   .about-mission {
@@ -372,18 +424,46 @@
     padding: 30px 25px;
   }
 
-  /* Mobile: Stack stats in 2x2 grid only */
-  .stats-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 500px;
+  /* Fixed 2x2 grid layout */
+  .about-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .stat-item {
+    /* FIXED mobile dimensions */
+    width: 100%;
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    
+    padding: 1rem;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Prevent content overflow */
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
   }
 
-  .stat-number {
-    font-size: 2.5rem;
+  .stat-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.25px;
   }
 
   .certification-badges {
@@ -398,6 +478,14 @@
 }
 
 @media (max-width: 480px) {
+  .about-hero {
+    padding-top: 80px;
+  }
+
+  .about-hero-container {
+    margin-top: 60px;
+  }
+
   .about-hero-subtitle {
     font-size: 1.1rem;
     padding: 0 10px;
@@ -411,22 +499,48 @@
     height: 300px;
   }
 
-  /* Very small mobile: Keep 2x2 grid */
-  .stats-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 400px;
+  /* Fixed 2x2 grid for small mobile */
+  .about-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 60px 0 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .stat-item {
+    /* FIXED small mobile dimensions */
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    
+    padding: 0.75rem;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Prevent content overflow */
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
   }
 
   .stat-number {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
   }
 
   .stat-label {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1px;
+    line-height: 1.1;
   }
 
   .mission-text p {
@@ -434,14 +548,45 @@
   }
 }
 
-/* Large screens: Ensure stats stay in single row */
-@media (min-width: 1200px) {
-  .stats-container {
+/* Extra small mobile devices */
+@media (max-width: 360px) {
+  .about-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stat-item {
+    /* FIXED extra small mobile dimensions */
+    width: 100%;
+    height: 90px;
+    min-height: 90px;
+    max-height: 90px;
+    
+    padding: 0.5rem;
+    box-sizing: border-box;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
-    max-width: 1400px;
-    flex-wrap: nowrap;
+    text-align: center;
+    
+    /* Prevent content overflow */
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+    line-height: 1.1;
   }
 }

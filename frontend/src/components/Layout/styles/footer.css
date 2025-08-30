@@ -6,7 +6,6 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
   transition: all 0.3s ease-in-out;
   background-color: transparent;
   background: #0a0a0a;
@@ -260,4 +259,14 @@
   .novellum-link {
     font-size: 0.95rem;
   }
+}
+
+/* Enhanced mobile scrolling support */
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+html, body {
+  touch-action: manipulation;
 }
