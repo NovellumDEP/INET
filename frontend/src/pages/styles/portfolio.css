@@ -115,24 +115,16 @@
 /* Mobile Category Dropdown */
 .portfolio-categories-mobile {
   display: none;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
   margin-bottom: 50px;
   position: relative;
-  z-index: 9999;
-}
-
-.portfolio-section.animate .portfolio-categories-mobile {
-  opacity: 1;
-  transform: translateY(0);
+  z-index: 100; /* Reduced from 9999 */
 }
 
 .mobile-filter-container {
   position: relative;
   width: 100%;
   max-width: 100%;
-  z-index: 9999;
+  z-index: 100; /* Reduced from 9999 */
   isolation: isolate;
 }
 
@@ -197,7 +189,7 @@
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 0;
   backdrop-filter: blur(20px);
-  z-index: 3001;
+  z-index: 101; /* Reduced from 3001 */
   max-height: 300px;
   overflow-y: auto;
   animation: dropdownSlide 0.2s ease-out;
@@ -664,6 +656,9 @@
 
   .portfolio-header {
     margin-bottom: 40px;
+    /* Remove animation dependency for mobile header */
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* Hide desktop categories, show mobile dropdown */
@@ -673,12 +668,16 @@
 
   .portfolio-categories-mobile {
     display: block;
+    /* Remove animation dependency - always visible on mobile */
     opacity: 1;
     transform: translateY(0);
   }
 
   .portfolio-scroll-wrapper {
     margin-bottom: 50px;
+    /* Remove animation dependency for mobile */
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .portfolio-cards-container {
@@ -688,6 +687,10 @@
 
   .portfolio-card {
     height: 550px;
+    /* Remove animation dependency for mobile cards */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: none;
   }
 
   /* Mobile clickable card adjustments */
