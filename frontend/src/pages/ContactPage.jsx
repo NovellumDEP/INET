@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import './styles/contact.css';
+import './styles/contactpage.css';
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("mkgvnpvy");
