@@ -1,0 +1,471 @@
+/* src/pages/styles/nav.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  margin-top: 0.5vw;
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-links-desktop {
+  display: none;
+}
+
+/* Enhanced nav-link */
+.nav-link {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: currentColor;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 2rem);
+}
+
+.nav-link.active::after {
+  width: calc(100% - 2rem);
+}
+
+/* CTA Button */
+.nav-cta-button {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+
+.nav-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-cta-button:hover::before {
+  left: 0;
+}
+
+/* Mobile Menu Button */
+.nav-mobile-button {
+  display: block;
+  position: relative;
+  z-index: 2000;
+}
+
+.mobile-menu-button {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.mobile-menu-button:focus {
+  outline: none;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Close Button */
+.nav-mobile-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 2000;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: rotate(90deg);
+  animation: fadeInRotate 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.nav-mobile-close:hover {
+  transform: rotate(0deg) scale(1.1);
+  color: #ff4444;
+}
+
+.nav-mobile-close:focus {
+  outline: none;
+}
+
+/* Full Screen Mobile Navigation Overlay */
+.nav-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-mobile-overlay-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.nav-mobile-menu-open {
+  transform: translateX(0);
+}
+
+.nav-mobile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Mobile Logo */
+.nav-mobile-logo {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.nav-mobile-logo .logo-image {
+  height: 80px;
+  margin-top: 0;
+}
+
+/* Mobile Links Container */
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Mobile Link Styles */
+.nav-mobile-link {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.nav-mobile-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-mobile-link:hover::before {
+  left: 0;
+}
+
+.nav-mobile-link:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-mobile-link.active {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile CTA */
+.nav-mobile-cta {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid white;
+  margin-top: 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp 0.6s ease forwards;
+}
+
+.nav-mobile-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-mobile-cta:hover::before {
+  left: 0;
+}
+
+.nav-mobile-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+/* Transparent state - white text and borders */
+.nav:not(.nav-scrolled) .nav-link,
+.nav:not(.nav-scrolled) .logo-text,
+.nav:not(.nav-scrolled) .mobile-menu-button,
+.nav:not(.nav-scrolled) .nav-cta-button {
+  color: white;
+  border-color: white;
+}
+
+.nav:not(.nav-scrolled) .nav-cta-button::before {
+  background-color: white;
+}
+
+.nav:not(.nav-scrolled) .nav-cta-button:hover {
+  color: black;
+}
+
+/* Scrolled state - white text on black background */
+.nav-scrolled .nav-link,
+.nav-scrolled .logo-text,
+.nav-scrolled .mobile-menu-button,
+.nav-scrolled .nav-cta-button {
+  color: white;
+  border-color: white;
+}
+
+.nav-scrolled .nav-cta-button::before {
+  background-color: white;
+}
+
+.nav-scrolled .nav-cta-button:hover {
+  color: black;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .nav-links-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-mobile-button {
+    display: none;
+  }
+
+  .nav-mobile-overlay {
+    display: none;
+  }
+}
+
+/* Mobile responsiveness for logo */
+@media (max-width: 480px) {
+  .logo-image {
+    height: 50px;
+  }
+  
+  .nav-content {
+    height: 4rem;
+  }
+
+  .nav-mobile-link {
+    font-size: 1.3rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .nav-mobile-cta {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .nav-mobile-content {
+    padding: 1.5rem;
+  }
+
+  .nav-mobile-links {
+    max-width: 280px;
+    gap: 1rem;
+  }
+
+  .nav-mobile-link {
+    font-size: 1.2rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .nav-mobile-cta {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+  }
+}

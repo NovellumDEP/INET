@@ -1,0 +1,394 @@
+/* src/components/styles/hero-servicelist.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.hero-servicelist-section {
+  background: #0a0a0a;
+  padding: 6rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-servicelist-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-servicelist-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.hero-servicelist-section.animate .hero-servicelist-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-servicelist-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.hero-servicelist-title-line {
+  width: 120px;
+  height: 3px;
+  background: #ffffff;
+  margin: 0 auto 1.5rem auto;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 1s ease-out 0.3s;
+}
+
+.hero-servicelist-section.animate .hero-servicelist-title-line {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hero-servicelist-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.hero-servicelist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.hero-service-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(60px);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.hero-service-card:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.hero-servicelist-section.animate .hero-service-card {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.hero-servicelist-section.animate .hero-service-card:nth-child(1) { animation-delay: 0.1s; }
+.hero-servicelist-section.animate .hero-service-card:nth-child(2) { animation-delay: 0.2s; }
+.hero-servicelist-section.animate .hero-service-card:nth-child(3) { animation-delay: 0.3s; }
+.hero-servicelist-section.animate .hero-service-card:nth-child(4) { animation-delay: 0.4s; }
+.hero-servicelist-section.animate .hero-service-card:nth-child(5) { animation-delay: 0.5s; }
+.hero-servicelist-section.animate .hero-service-card:nth-child(6) { animation-delay: 0.6s; }
+
+.hero-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-service-image-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-service-card:hover .hero-service-image {
+  transform: scale(1.05);
+}
+
+.hero-service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.7) 80%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.hero-service-card:hover .hero-service-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.8) 70%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+.hero-service-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+
+.hero-service-card:hover .hero-service-icon {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.hero-service-content-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-service-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  transition: all 0.4s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-service-card:hover .hero-service-title {
+  transform: translateY(-10px);
+  margin-bottom: 1rem;
+}
+
+.hero-service-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-service-card:hover .hero-service-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visual feedback for clickable cards */
+.hero-service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-service-card:hover::after {
+  opacity: 1;
+}
+
+.hero-service-card:focus::after {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .hero-servicelist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .hero-service-image-container {
+    height: 450px;
+  }
+}
+
+/* Mobile Styles - One Card Per Row */
+@media (max-width: 768px) {
+  .hero-servicelist-section {
+    padding: 4rem 0;
+  }
+  
+  .hero-servicelist-container {
+    padding: 0 1.5rem;
+  }
+  
+  .hero-servicelist-header {
+    margin-bottom: 3rem;
+  }
+  
+  .hero-servicelist-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  .hero-service-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    /* Remove hover transforms on mobile */
+    transform: none !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-service-image-container {
+    height: 400px; /* Taller cards */
+  }
+  
+  .hero-service-content-overlay {
+    padding: 2rem;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+  
+  .hero-service-title {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    margin-bottom: 1rem !important;
+    transform: none !important;
+  }
+  
+  .hero-service-description {
+    opacity: 1 !important;
+    transform: none !important;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    margin-bottom: 1rem;
+  }
+  
+  /* Mobile click feedback */
+  .hero-service-card:active::after {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hero-service-icon {
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Disable hover effects on mobile */
+  .hero-service-card:hover .hero-service-image {
+    transform: none;
+  }
+  
+  .hero-service-card:hover .hero-service-icon {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .hero-service-card:hover .hero-service-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.7) 80%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .hero-servicelist-section {
+    padding: 3rem 0;
+  }
+  
+  .hero-servicelist-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-servicelist-grid {
+    gap: 2rem;
+  }
+  
+  .hero-service-image-container {
+    height: 350px; /* Slightly shorter on very small screens */
+  }
+  
+  .hero-service-content-overlay {
+    padding: 1.5rem;
+  }
+  
+  .hero-service-icon {
+    width: 50px;
+    height: 50px;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .hero-service-image-container {
+    height: 320px;
+  }
+  
+  .hero-service-content-overlay {
+    padding: 1.25rem;
+  }
+}

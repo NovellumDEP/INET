@@ -1,0 +1,73 @@
+/* src/components/buttons/PrimaryButton.css */
+
+.primary-button {
+  /* Reset all possible inherited styles */
+  all: unset !important;
+  
+  /* Apply our specific styles with !important */
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid transparent !important;
+  border-radius: 0 !important;
+  padding: 15px 30px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', sans-serif !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.primary-button span {
+  position: relative !important;
+  z-index: 2 !important;
+  transition: color 0.3s ease !important;
+  display: inline-block !important;
+}
+
+.primary-button::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 100% !important;
+  background: #ffffff !important;
+  transition: width 0.3s ease !important;
+  z-index: 1 !important;
+}
+
+.primary-button:hover::before {
+  width: 100% !important;
+}
+
+.primary-button:hover {
+  border-color: #ffffff !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.primary-button:hover span {
+  color: #000000 !important;
+}
+
+.primary-button:active {
+  transform: scale(0.98) !important;
+}
+
+.primary-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

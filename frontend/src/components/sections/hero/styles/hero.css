@@ -1,0 +1,461 @@
+/* src/styles/hero.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeIn 0.8s ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2)
+  );
+  will-change: opacity;
+}
+
+/* Bottom gradient overlay */
+.hero-bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 3rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  will-change: transform, opacity;
+}
+
+.hero-text-container {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.hero-title {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3rem, 8vw, 7.2rem);
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-right: 10vw;
+  animation: fadeDown 0.8s ease-out;
+  text-transform: uppercase;
+  position: relative;
+  word-break: break-word;
+}
+
+/* Animated underline */
+.hero-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 1) 100%);
+  animation: expandUnderline 1.2s ease-out 0.8s forwards;
+}
+
+@keyframes expandUnderline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  text-align: left;
+  letter-spacing: 0.01em;
+  animation: fadeDown 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+  max-width: 550px;
+  line-height: 1.5;
+}
+
+.hero-highlight {
+  color: #ffffff;
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+/* CTA Button positioning */
+.CTA-button-white {
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+/* Trust Indicators - Clean version with only sizing */
+.hero-trust-indicators {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  display: flex;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeDown 0.8s ease-out 1.2s forwards;
+}
+
+.trust-indicator {
+  /* No styling - just a container */
+}
+
+.trust-badge {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Smooth scrolling optimization */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ENHANCED MOBILE RESPONSIVENESS */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+  .hero-content {
+    padding: 2rem;
+  }
+  
+  .hero-title {
+    margin-right: 5vw;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 2rem 1.5rem;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    margin-right: 0;
+  }
+  
+  .hero-subtitle {
+    max-width: 90%;
+  }
+  
+  .trust-badge {
+    height: 70px;
+  }
+  
+  .hero-trust-indicators {
+    bottom: 2rem;
+    left: 1.5rem;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-image {
+    background-attachment: scroll;
+    transform: none !important;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+    transform: none !important;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: clamp(4rem, 9vw, 6rem);
+    text-align: center;
+    margin: 0;
+    line-height: 0.95;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .hero-subtitle {
+    text-align: center;
+    max-width: 100%;
+    margin-top: 1rem;
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  }
+
+  .hero-text-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-trust-indicators {
+    position: static;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .trust-badge {
+    height: 60px;
+  }
+  
+  .CTA-button-white {
+    margin-top: 2rem;
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile overlay adjustments */
+  .hero-image-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4)
+    );
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 100vh;
+    height: auto;
+    min-height: 100svh; /* Use small viewport height for better mobile support */
+  }
+  
+  .hero-content {
+    padding: 1rem;
+    height: 100vh;
+    height: 100svh;
+    gap: 1rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(3.5rem, 11vw, 5rem);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-top: 1rem;
+    line-height: 1.4;
+  }
+
+  .hero-text-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-trust-indicators {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .trust-badge {
+    height: 50px;
+  }
+  
+  .CTA-button-white {
+    margin-top: 2rem;
+    padding: 1.125rem 2.5rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+  .hero-content {
+    padding: 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+  }
+  
+  .trust-badge {
+    height: 45px;
+  }
+  
+  .hero-trust-indicators {
+    gap: 0.75rem;
+  }
+  
+  .CTA-button-white {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    margin-top: 0.5rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+  
+  .hero-text-container {
+    margin-bottom: 1rem;
+  }
+  
+  .hero-trust-indicators {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  .trust-badge {
+    height: 40px;
+  }
+  
+  .CTA-button-white {
+    margin-top: 1rem;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Disable parallax on mobile devices for better performance */
+@media (max-width: 768px) {
+  .hero-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-attachment: scroll;
+    transform: none !important;
+  }
+  
+  .hero-content {
+    transform: none !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-image {
+    background-size: cover;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-subtitle,
+  .hero-trust-indicators {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hero-title::after {
+    animation: none;
+    width: 60%;
+  }
+}

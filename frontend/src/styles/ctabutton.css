@@ -1,0 +1,114 @@
+/* Base button styles */
+.CTA-button-black,
+.CTA-button-white {
+    position: relative;
+    padding: 14px 36px;
+    background: transparent;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Black variant */
+.CTA-button-black {
+    color: black;
+}
+
+.CTA-button-black::before,
+.CTA-button-black::after,
+.CTA-button-black span::before,
+.CTA-button-black span::after {
+    background: black;
+}
+
+/* White variant */
+.CTA-button-white {
+    color: white;
+}
+
+.CTA-button-white::before,
+.CTA-button-white::after,
+.CTA-button-white span::before,
+.CTA-button-white span::after {
+    background: white;
+}
+
+/* Left line */
+.CTA-button-black::before,
+.CTA-button-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Right line */
+.CTA-button-black::after,
+.CTA-button-white::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Top line */
+.CTA-button-black span::before,
+.CTA-button-white span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Bottom line */
+.CTA-button-black span::after,
+.CTA-button-white span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hover effects */
+.CTA-button-black:hover,
+.CTA-button-white:hover {
+    letter-spacing: 0.08em;
+}
+
+.CTA-button-black:hover::before,
+.CTA-button-black:hover::after,
+.CTA-button-white:hover::before,
+.CTA-button-white:hover::after {
+    transform: scaleY(1);
+}
+
+.CTA-button-black:hover span::before,
+.CTA-button-black:hover span::after,
+.CTA-button-white:hover span::before,
+.CTA-button-white:hover span::after {
+    transform: scaleX(1);
+}
