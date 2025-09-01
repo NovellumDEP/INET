@@ -38,9 +38,9 @@ const TermsConditions = () => {
                   INET Fire & Security Limited is a company registered in England and Wales.
                 </p>
                 <p className="legal-paragraph">
-                  Company Registration Number: [Your Company Number]<br/>
-                  Registered Office: [Your Business Address]<br/>
-                  VAT Number: [Your VAT Number]
+                  Company Registration Number: 15877056<br/>
+                  Our Area: Herefordshire <br/>
+                  
                 </p>
               </div>
 
