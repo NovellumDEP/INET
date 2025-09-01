@@ -63,7 +63,7 @@ const Hero = () => {
       >
         <div className="hero-text-container">
           <h1 className={`hero-title ${isLoaded ? 'animate' : ''}`}>
-            PROTECT WHAT MATTERS MOST
+            INTERNATIONAL NETWORK FOR FIRE & SECURITY SYSTEMS
           </h1>
           
           <p className="hero-subtitle">

@@ -77,7 +77,7 @@ const TermsConditions = () => {
                 <div className="legal-subsection">
                   <h4 className="legal-subsection-title">Payment Terms</h4>
                   <p className="legal-paragraph">
-                    Payment terms are net 30 days from invoice date unless otherwise agreed in writing. Late payment charges may apply in accordance with the Late Payment of Commercial Debts (Interest) Act 1998.
+                    Payment terms are net 14 days from invoice date unless otherwise agreed in writing. Late payment charges may apply in accordance with the Late Payment of Commercial Debts (Interest) Act 1998.
                   </p>
                 </div>
                 <div className="legal-subsection">
