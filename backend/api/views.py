@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Project
+from .serializers import ProjectSerializer
 import logging
 import json
 from datetime import datetime
@@ -104,3 +104,14 @@ IP: {ip}
     except Exception as e:
         logger.error(f"Processing error: {e}")
         return Response({'error': 'Something went wrong'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+# views.py
+from rest_framework import viewsets
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
