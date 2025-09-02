@@ -12,18 +12,16 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
-import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# In production, use an environment variable instead
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-%s34pw3m9j*z^cw$&!hg!@$0o(f^cp1_cd2m6=s-!d301uq95l')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-fallback-secret-key-change-this-immediately')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 # Get the Railway-assigned URL when deployed
 RAILWAY_STATIC_URL = os.environ.get('RAILWAY_STATIC_URL', '')
@@ -34,9 +32,9 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '.railway.app',
-    'yourdomain.net',  # Replace with your actual domain
-    'www.yourdomain.net',  # Replace with your actual domain
-    '.yourdomain.net',  # This allows all subdomains
+    'inetfireandsecurity.com',
+    'www.inetfireandsecurity.com',
+    '.inetfireandsecurity.com',
 ]
 
 # Application definition
@@ -86,21 +84,23 @@ else:
 # CSRF and CORS configuration
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
+    'https://inetfireandsecurity.com',
+    'https://www.inetfireandsecurity.com',
     'http://localhost:5173',
     'http://localhost:8000',
     'http://127.0.0.1:5173',
     'http://127.0.0.1:8000',
-    # Add your custom domains later when ready
 ]
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     'https://*.railway.app',
+    'https://inetfireandsecurity.com',
+    'https://www.inetfireandsecurity.com',
     'http://localhost:5173',
     'http://localhost:8000',
     'http://127.0.0.1:5173', 
     'http://127.0.0.1:8000',
-    # Add your custom domains later when ready
 ]
 CORS_ALLOW_CREDENTIALS = True
 
