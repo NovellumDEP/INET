@@ -63,7 +63,7 @@ const Hero = () => {
       >
         <div className="hero-text-container">
           <h1 className={`hero-title ${isLoaded ? 'animate' : ''}`}>
-            INTERNATIONAL NETWORK FOR FIRE & SECURITY SYSTEMS
+            <span className="no-break">INTERNATIONAL</span> NETWORK FOR FIRE & SECURITY SYSTEMS
           </h1>
           
           <p className="hero-subtitle">
@@ -82,13 +82,12 @@ const Hero = () => {
         <div className="hero-trust-indicators">
           <div className="trust-indicator">
             <img 
-              src={getOptimizedImageUrl('INETFS/trustsign.png', 150)} 
-              alt="Security License" 
+              src={getOptimizedImageUrl('INETFS/trustsign.png', 150)}
+              alt="Security License"
               className="trust-badge"
             />
           </div>
-       
-        
+          
         </div>
       </div>
 
