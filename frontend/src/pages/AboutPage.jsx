@@ -186,7 +186,7 @@ const AboutPage = () => {
                 <span className="stat-label">Years Serving the South West</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">1000+</span>
+                <span className="stat-number">500+</span>
                 <span className="stat-label">Systems installed</span>
               </div>
               <div className="stat-item">
