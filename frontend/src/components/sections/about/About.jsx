@@ -106,7 +106,7 @@ const About = () => {
           </AnimatedElement>
           <AnimatedElement animation="slide-up" delay={400}>
             <p className="KL-889-hero-subtitle">
-              Protecting what matters most with over 7 years of trusted experience
+              Protecting what matters most with over 10+ years of trusted experience
             </p>
           </AnimatedElement>
         </div>
@@ -127,20 +127,20 @@ const About = () => {
           <div className="about-content">
             {/* Description */}
             <AnimatedElement animation="slide-left" delay={200}>
-              <div className="about-description">
-                <p>
-                  With over <span className="about-highlight">7+ years of experience</span> in fire and security systems, 
-                  we are the trusted choice for protecting what matters most. Our BAFE certified engineers and 
-                  NSI Gold approved services ensure your property receives the highest standard of protection 
-                  available in the industry.
-                </p>
-                <p>
-                  From initial consultation and system design to installation, maintenance, and 24/7 monitoring, 
-                  we provide <span className="about-highlight">comprehensive security solutions</span> tailored to your 
-                  specific needs. Our commitment to excellence and customer satisfaction has made us the 
-                  preferred security partner for thousands of homes and businesses.
-                </p>
-              </div>
+          <div className="about-description">                 
+            <p>                   
+              With over <span className="about-highlight">10+ years of experience</span> in fire and security systems,                    
+              we are the trusted choice for protecting what matters most. Our certified engineers and                    
+              approved services ensure your property receives the highest standard of protection                    
+              available in the industry.                 
+            </p>                 
+            <p>                   
+              From initial consultation and system design to installation, maintenance, and 24/7 monitoring,                    
+              we provide <span className="about-highlight">comprehensive security solutions</span> tailored to your                    
+              specific needs. Our commitment to excellence and customer satisfaction has made us the                    
+              preferred security partner for thousands of homes and businesses across the region.                 
+            </p>               
+            </div>
             </AnimatedElement>
 
             {/* Image */}
@@ -181,7 +181,7 @@ const About = () => {
                 <AnimatedElement animation="slide-up" delay={400}>
                   <div className="about-stat">
                     <span className="stat-number">100%</span>
-                    <span className="stat-label">BAFE Certified</span>
+                    <span className="stat-label">Customer Satisfaction</span>
                   </div>
                 </AnimatedElement>
               </div>

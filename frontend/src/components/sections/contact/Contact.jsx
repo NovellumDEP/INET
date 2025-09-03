@@ -161,7 +161,7 @@ const Contact = () => {
                   </div>
                   <div className="detail-content">
                     <h4 className="detail-label">PHONE</h4>
-                    <p className="detail-value">+44 7123 456789</p>
+                    <p className="detail-value">03300439011</p>
                   </div>
                 </div>
 
@@ -181,7 +181,7 @@ const Contact = () => {
                   </div>
                   <div className="detail-content">
                     <h4 className="detail-label">LOCATION</h4>
-                    <p className="detail-value">Bristol, England</p>
+                    <p className="detail-value">Hereford, England</p>
                   </div>
                 </div>
 

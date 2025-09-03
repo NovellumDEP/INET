@@ -93,7 +93,7 @@ const AboutPage = () => {
         
         <div className="about-hero-container">
           <div className="about-hero-content">
-            <h1 className="about-hero-title">PROTECTING THE SOUTH WEST FOR 7 YEARS</h1>
+            <h1 className="about-hero-title">PROTECTING THE SOUTH WEST FOR 10+ YEARS</h1>
             <p className="about-hero-subtitle">
               Based in the heart of the South West, we're passionate about security and dedicated to protecting what matters most to our community.
             </p>
@@ -115,9 +115,9 @@ const AboutPage = () => {
               <div className="about-section-line"></div>
               
               <div className="about-story-text">
-                <p>
-                  For over 7 years, INET Fire & Security has been the trusted guardian of homes and businesses across the South West. What started as a passion for protecting our local community has grown into a comprehensive security service that combines cutting-edge technology with genuine care for our clients.
-                </p>
+             <p>                   
+              Our experienced engineers have been the trusted guardians of homes and businesses across the South West for over 10+ years. What started as a passion for protecting our local community has grown into comprehensive security expertise that combines cutting-edge technology with genuine care for our clients.                 
+              </p>
                 
                 <p>
                   Based in the beautiful South West of England, we understand the unique security challenges our region faces. From bustling city centres to remote countryside properties, we've seen it all and protected it all. Our team doesn't just install security systems – we build relationships with our clients that last for years.
@@ -162,9 +162,9 @@ const AboutPage = () => {
               
               <div className="value-card">
                 <Award className="value-icon" size={40} />
-                <h3 className="value-title">Dedicated Excellence</h3>
+                <h3 className="value-title">Expert Engineers</h3>
                 <p className="value-description">
-                  Our 7 years of experience have taught us that excellence comes from dedication. Every system we install reflects our commitment to perfection.
+                  Our certified engineers bring over 10+ years of individual experience to every installation. Their expertise ensures your system is installed to the highest standards.
                 </p>
               </div>
               
@@ -187,15 +187,15 @@ const AboutPage = () => {
               </div>
               <div className="stat-item">
                 <span className="stat-number">1000+</span>
-                <span className="stat-label">Happy Clients Protected</span>
+                <span className="stat-label">Systems installed</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">24/7</span>
                 <span className="stat-label">Emergency Response</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">100%</span>
-                <span className="stat-label">Dedicated to Excellence</span>
+                <span className="stat-number">10+</span>
+                <span className="stat-label">Years Experience</span>
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ const AboutPage = () => {
                 </p>
                 
                 <p>
-                  Through our 7 years of dedicated service, we've learned that great security isn't just about the latest technology – it's about understanding people's needs, building trust, and delivering solutions that truly work. That's what drives us every single day.
+                  Through our 10+ years of dedicated service, we've learned that great security isn't just about the latest technology – it's about understanding people's needs, building trust, and delivering solutions that truly work. That's what drives us every single day.
                 </p>
               </div>
             </div>

@@ -154,7 +154,7 @@ const Services = () => {
       title: "Gate & Barrier automation",
       description: "Automated gate and barrier systems for secure, controlled access and efficient traffic management across residential and commercial properties.",
       icon: DoorOpen,
-      image: "INETFS/SECURITY1.jpg",
+      image: "INETFS/IMG_2222.jpg",
       slug: "electrical-safety"
     },
      {
