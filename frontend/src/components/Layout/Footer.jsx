@@ -78,15 +78,15 @@ const Footer = () => {
               <div className="footer-contact">
                 <div className="footer-contact-item">
                   <Phone size={16} />
-                  <span>+44 7123 456789</span>
+                  <span>03300439011</span>
                 </div>
                 <div className="footer-contact-item">
                   <Mail size={16} />
-                  <span>info@security.com</span>
+                  <span>info@inetfireandsecurity.com</span>
                 </div>
                 <div className="footer-contact-item">
                   <MapPin size={16} />
-                  <span>London, England</span>
+                  <span>Hereford, England</span>
                 </div>
               </div>
             </div>

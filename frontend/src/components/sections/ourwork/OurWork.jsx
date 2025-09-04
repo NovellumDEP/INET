@@ -100,78 +100,78 @@ const OurWork = () => {
     { id: 'industrial', label: 'Industrial', icon: Factory }
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Office Security System',
-      location: 'Surrey, London',
-      category: 'commercial',
-      image: 'INETFS/IMG_2167.png', 
-      systems: ['CCTV Surveillance', 'Access Control', 'Intruder Alarm'],
-      description: 'Complete security installation for luxury family home including perimeter protection and smart monitoring.',
-      slug: 'office-security-system'
-    },
-    {
-      id: 2,
-      title: 'Office Complex Fire Safety',
-      location: 'Manchester Business Park',
-      category: 'commercial',
-      image: 'INETFS/IMG_2175.heic', 
-      systems: ['Fire Detection', 'Emergency Lighting', 'Sprinkler System'],
-      description: 'Comprehensive fire safety system for 5-story office building with 24/7 monitoring.',
-      slug: 'office-complex-fire-safety'
-    },
-    {
-      id: 3,
-      title: 'Industrial Warehouse Fire Safety',
-      location: 'Birmingham Industrial Estate',
-      category: 'industrial',
-      image: 'INETFS/IMG_2171.jpg', 
-      systems: ['Fire Detection', 'Beam Smoke Detection', 'Manual Call Points'],
-      description: 'Large-scale security installation protecting valuable inventory and equipment.',
-      slug: 'industrial-warehouse-fire-safety'
-    },
-    {
-      id: 4,
-      title: 'Retail Store Protection',
-      location: 'Central London',
-      category: 'commercial',
-      image: 'INETFS/IMG_2168.jpg', 
-      systems: ['Anti-theft System', 'CCTV Monitoring', 'Emergency Response'],
-      description: 'Multi-location retail security with real-time monitoring and rapid response.',
-      slug: 'retail-store-protection'
-    },
-    {
-      id: 5,
-      title: 'Smart Home Integration',
-      location: 'Essex',
-      category: 'residential',
-      image: 'INETFS/IMG_2166.jpg', 
-      systems: ['Smart Alarms', 'Mobile Monitoring', 'Automated Security'],
-      description: 'Modern smart home security with app-based control and automation features.',
-      slug: 'smart-home-integration'
-    },
-    {
-      id: 6,
-      title: 'Manufacturing Plant Safety',
-      location: 'Leeds',
-      category: 'industrial',
-      image: 'INETFS/IMG_2170.jpg', 
-      systems: ['Fire Suppression', 'Gas Detection', 'Emergency Systems'],
-      description: 'Critical safety systems for chemical manufacturing facility with hazard monitoring.',
-      slug: 'manufacturing-plant-safety'
-    },
-    {
-      id: 7,
-      title: 'Warehouse Goods Security',
-      location: 'Bristol',
-      category: 'industrial',
-      image: 'INETFS/IMG_2202.jpg', 
-      systems: ['Monitoring', 'Remote CCTV', 'Emergency Systems'],
-      description: 'Critical safety systems for chemical manufacturing facility with hazard monitoring.',
-      slug: 'warehouse-goods-security'
-    }
-  ];
+const projects = [
+   {
+     id: 1,
+     title: 'Office Security System',
+     location: 'Reading, Berkshire',
+     category: 'commercial',
+     image: 'INETFS/IMG_2167.png', 
+     systems: ['CCTV Surveillance', 'Access Control', 'Intruder Alarm'],
+     description: 'Complete security installation for luxury family home including perimeter protection and smart monitoring.',
+     slug: 'office-security-system'
+   },
+   {
+     id: 2,
+     title: 'Office Complex Fire Safety',
+     location: 'Oxford, Oxfordshire',
+     category: 'commercial',
+     image: 'INETFS/IMG_2175.heic', 
+     systems: ['Fire Detection', 'Emergency Lighting', 'Sprinkler System'],
+     description: 'Comprehensive fire safety system for 5-story office building with 24/7 monitoring.',
+     slug: 'office-complex-fire-safety'
+   },
+   {
+     id: 3,
+     title: 'Industrial Warehouse Fire Safety',
+     location: 'Swindon, Wiltshire',
+     category: 'industrial',
+     image: 'INETFS/IMG_2171.jpg', 
+     systems: ['Fire Detection', 'Beam Smoke Detection', 'Manual Call Points'],
+     description: 'Large-scale security installation protecting valuable inventory and equipment.',
+     slug: 'industrial-warehouse-fire-safety'
+   },
+   {
+     id: 4,
+     title: 'Retail Store Protection',
+     location: 'Cheltenham, Gloucestershire',
+     category: 'commercial',
+     image: 'INETFS/IMG_2168.jpg', 
+     systems: ['Anti-theft System', 'CCTV Monitoring', 'Emergency Response'],
+     description: 'Multi-location retail security with real-time monitoring and rapid response.',
+     slug: 'retail-store-protection'
+   },
+  {
+    id: 5,
+    title: 'Automated Gate Security',
+    location: 'Bath, Somerset',
+    category: 'residential',
+    image: 'INETFS/IMG_2166.jpg',
+    systems: ['Number Plate Recognition', 'Automated Gates', 'Intercom System', 'Access Control'],
+    description: 'Advanced gate security system with automatic number plate recognition and visitor management.',
+    slug: 'automated-gate-security'
+  },
+   {
+     id: 6,
+     title: 'Manufacturing Plant Safety',
+     location: 'Hereford, Herefordshire',
+     category: 'industrial',
+     image: 'INETFS/IMG_2170.jpg', 
+     systems: ['Fire Suppression', 'Gas Detection', 'Emergency Systems'],
+     description: 'Critical safety systems for chemical manufacturing facility with hazard monitoring.',
+     slug: 'manufacturing-plant-safety'
+   },
+   {
+     id: 7,
+     title: 'Warehouse Goods Security',
+     location: 'Bristol, Somerset',
+     category: 'industrial',
+     image: 'INETFS/IMG_2202.jpg', 
+     systems: ['Monitoring', 'Remote CCTV', 'Emergency Systems'],
+     description: 'Critical safety systems for chemical manufacturing facility with hazard monitoring.',
+     slug: 'warehouse-goods-security'
+   }
+ ];
 
   // Filter projects based on active category
   const filteredProjects = activeCategory === 'all' 

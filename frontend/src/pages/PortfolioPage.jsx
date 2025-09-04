@@ -102,11 +102,11 @@ const PortfolioPage = () => {
     { id: 'industrial', label: 'Industrial', icon: Factory }
   ];
 
-  const projects = [
+const projects = [
     {
       id: 1,
-      title: 'Luxury Home Security System',
-      location: 'Surrey, London',
+      title: 'Office Security System',
+      location: 'Reading, Berkshire',
       category: 'residential',
       date: 'March 2024',
       client: 'Private Residence',
@@ -126,10 +126,10 @@ const PortfolioPage = () => {
     {
       id: 2,
       title: 'Office Complex Fire Safety',
-      location: 'Manchester Business Park',
+      location: 'Oxford, Oxfordshire',
       category: 'commercial',
       date: 'February 2024',
-      client: 'Manchester Business Solutions',
+      client: 'Oxford Business Solutions',
       image: 'INETFS/IMG_2175.heic',
       systems: ['Fire Detection', 'Emergency Lighting', 'Sprinkler System', 'Evacuation Systems'],
       description: 'Comprehensive fire safety system for 5-story office building with 24/7 monitoring.',
@@ -145,11 +145,11 @@ const PortfolioPage = () => {
     },
     {
       id: 3,
-      title: 'Industrial Warehouse Protection',
-      location: 'Birmingham Industrial Estate',
+      title: 'Industrial Warehouse Fire Safety',
+      location: 'Swindon, Wiltshire',
       category: 'industrial',
       date: 'January 2024',
-      client: 'Midlands Logistics Ltd',
+      client: 'Wiltshire Logistics Ltd',
       image: 'INETFS/IMG_2171.jpg',
       systems: ['Fire Detection', 'Beam Smoke Detection', 'Manual Call Points', 'Perimeter Security'],
       description: 'Large-scale security installation protecting valuable inventory and equipment in 50,000 sq ft facility.',
@@ -165,15 +165,15 @@ const PortfolioPage = () => {
     },
     {
       id: 4,
-      title: 'Retail Chain Security',
-      location: 'Central London',
+      title: 'Retail Store Protection',
+      location: 'Cheltenham, Gloucestershire',
       category: 'commercial',
       date: 'December 2023',
       client: 'Fashion Forward Retail',
       image: 'INETFS/IMG_2168.jpg',
       systems: ['Anti-theft System', 'CCTV Monitoring', 'Emergency Response', 'Access Control'],
       description: 'Multi-location retail security with real-time monitoring and rapid response across 8 stores.',
-      challenge: 'Fashion retail chain with 8 London locations experiencing high theft rates needed coordinated security solution with central monitoring.',
+      challenge: 'Fashion retail chain with 8 locations experiencing high theft rates needed coordinated security solution with central monitoring.',
       solution: 'Deployed integrated CCTV system with facial recognition, anti-theft tagging, and central monitoring station providing real-time alerts to all locations.',
       results: [
         'Theft reduced by 65% across all locations',
@@ -185,31 +185,31 @@ const PortfolioPage = () => {
     },
     {
       id: 5,
-      title: 'Smart Home Integration',
-      location: 'Essex Countryside',
+      title: 'Automated Gate Security',
+      location: 'Bath, Somerset',
       category: 'residential',
       date: 'November 2023',
-      client: 'The Johnson Family',
+      client: 'Private Estate',
       image: 'INETFS/IMG_2166.jpg',
-      systems: ['Smart Alarms', 'Mobile Monitoring', 'Automated Security', 'Environmental Controls'],
-      description: 'Modern smart home security with app-based control and automation features for rural property.',
-      challenge: 'Remote countryside property needed smart security solution with reliable connectivity and integration with existing home automation systems.',
-      solution: 'Implemented cellular backup systems, solar-powered perimeter sensors, and advanced mobile app with real-time notifications and remote control capabilities.',
+      systems: ['Number Plate Recognition', 'Automated Gates', 'Intercom System', 'Access Control'],
+      description: 'Advanced gate security system with automatic number plate recognition and visitor management for luxury residential estate.',
+      challenge: 'High-end residential estate needed sophisticated gate security that could automatically recognize authorized vehicles while maintaining elegant aesthetics and providing seamless access for residents.',
+      solution: 'Installed ANPR cameras with AI-powered recognition, automated gate controls, video intercom system, and mobile app integration for remote visitor management and access control.',
       results: [
-        '100% reliable connectivity via cellular backup',
-        'Energy-efficient solar-powered sensors',
-        'Complete property coverage including outbuildings',
-        'Peace of mind for extended travel periods'
+        '99.8% accurate number plate recognition',
+        'Reduced unauthorized access attempts to zero',
+        'Average gate opening time under 3 seconds',
+        'Complete visitor log and audit trail maintained'
       ],
-      slug: 'smart-home-integration'
+      slug: 'automated-gate-security'
     },
     {
       id: 6,
       title: 'Manufacturing Plant Safety',
-      location: 'Leeds Industrial Park',
+      location: 'Hereford, Herefordshire',
       category: 'industrial',
       date: 'October 2023',
-      client: 'Northern Manufacturing Co.',
+      client: 'Herefordshire Manufacturing Co.',
       image: 'INETFS/IMG_2170.jpg',
       systems: ['Fire Suppression', 'Gas Detection', 'Emergency Systems', 'Process Safety'],
       description: 'Critical safety systems for chemical manufacturing facility with hazard monitoring and automated response.',
@@ -225,8 +225,8 @@ const PortfolioPage = () => {
     },
     {
       id: 7,
-      title: 'Distribution Center Security',
-      location: 'Bristol Logistics Hub',
+      title: 'Warehouse Goods Security',
+      location: 'Bristol, Somerset',
       category: 'industrial',
       date: 'September 2023',
       client: 'Southwest Distribution Ltd',
@@ -246,7 +246,7 @@ const PortfolioPage = () => {
     {
       id: 8,
       title: 'Heritage Building Protection',
-      location: 'Bath Historic District',
+      location: 'Bath, Somerset',
       category: 'commercial',
       date: 'August 2023',
       client: 'Bath Heritage Trust',
