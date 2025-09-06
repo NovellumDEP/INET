@@ -105,11 +105,11 @@ const PortfolioPage = () => {
 const projects = [
     {
       id: 1,
-      title: 'Office Security System',
-      location: 'Reading, Berkshire',
+      title: 'Site Wide CCTV system',
+      location: 'Hereford, Herefordshire',
       category: 'residential',
       date: 'March 2024',
-      client: 'Private Residence',
+     
       image: 'INETFS/IMG_2167.png',
       systems: ['CCTV Surveillance', 'Access Control', 'Intruder Alarm', 'Smart Home Integration'],
       description: 'Complete security installation for luxury family home including perimeter protection and smart monitoring.',
@@ -125,31 +125,29 @@ const projects = [
     },
     {
       id: 2,
-      title: 'Office Complex Fire Safety',
-      location: 'Oxford, Oxfordshire',
+      title: 'Industrial Complex Security Installation',
+      location: 'Herefordshire',
       category: 'commercial',
-      date: 'February 2024',
-      client: 'Oxford Business Solutions',
+      date: 'March 2024',
       image: 'INETFS/IMG_2175.heic',
-      systems: ['Fire Detection', 'Emergency Lighting', 'Sprinkler System', 'Evacuation Systems'],
-      description: 'Comprehensive fire safety system for 5-story office building with 24/7 monitoring.',
-      challenge: 'A 5-story office complex housing 200+ employees needed a complete fire safety overhaul to meet new BS 5839 regulations while minimizing business disruption.',
-      solution: 'Phased installation over 6 weeks with night and weekend work to avoid disrupting business operations. Implemented advanced smoke detection, emergency lighting, and evacuation systems.',
+      systems: ['Perimeter Detection', 'Motion Sensors', 'CCTV Integration', 'Access Control'],
+      description: 'Advanced intruder alarm system for large industrial manufacturing facility with 24/7 monitoring.',
+      challenge: 'A 15-acre industrial complex with multiple buildings, outdoor storage areas, and valuable machinery required comprehensive perimeter security while accommodating shift workers and deliveries.',
+      solution: 'Deployed a multi-zone intruder alarm system with PIR sensors, beam breaks along the perimeter, integrated CCTV, and smart access control. Installation coordinated around production schedules with minimal operational impact.',
       results: [
-        'Full BS 5839 compliance achieved',
-        'Zero business downtime during installation',
-        'Reduced insurance premiums by 15%',
-        'Staff training completed for 200+ employees'
+        'Complete perimeter security coverage achieved',
+        'Integration with existing CCTV system successful',
+        '24/7 automated monitoring with instant alerts',
+        'Remote monitoring capability for management team'
       ],
-      slug: 'office-complex-fire-safety'
+      slug: 'industrial-complex-security-installation'
     },
     {
       id: 3,
-      title: 'Industrial Warehouse Fire Safety',
-      location: 'Swindon, Wiltshire',
+      title: 'Commercial Fire alarm install',
+      location: 'Worcestershire',
       category: 'industrial',
       date: 'January 2024',
-      client: 'Wiltshire Logistics Ltd',
       image: 'INETFS/IMG_2171.jpg',
       systems: ['Fire Detection', 'Beam Smoke Detection', 'Manual Call Points', 'Perimeter Security'],
       description: 'Large-scale security installation protecting valuable inventory and equipment in 50,000 sq ft facility.',
@@ -165,23 +163,22 @@ const projects = [
     },
     {
       id: 4,
-      title: 'Retail Store Protection',
-      location: 'Cheltenham, Gloucestershire',
-      category: 'commercial',
-      date: 'December 2023',
-      client: 'Fashion Forward Retail',
+      title: 'Luxury Home Security Estate',
+      location: 'Gloucestershire',
+      category: 'residential',
+      date: 'January 2024',
       image: 'INETFS/IMG_2168.jpg',
-      systems: ['Anti-theft System', 'CCTV Monitoring', 'Emergency Response', 'Access Control'],
-      description: 'Multi-location retail security with real-time monitoring and rapid response across 8 stores.',
-      challenge: 'Fashion retail chain with 8 locations experiencing high theft rates needed coordinated security solution with central monitoring.',
-      solution: 'Deployed integrated CCTV system with facial recognition, anti-theft tagging, and central monitoring station providing real-time alerts to all locations.',
+      systems: ['4K CCTV Network', 'Smart Home Integration', 'Perimeter Protection', 'Remote Monitoring'],
+      description: 'Comprehensive security system for large residential property with discreet 4K surveillance and smart home integration.',
+      challenge: 'Large residential property required comprehensive CCTV coverage with strategic camera positioning to eliminate blind spots, careful cable routing to maintain aesthetics, and coordinated installation schedule to minimize disruption to family routines.',
+      solution: 'Installed weatherproof 4K CCTV cameras with night vision, integrated smart doorbell systems, perimeter sensors, and smartphone app control. All wiring concealed through careful planning and professional installation techniques.',
       results: [
-        'Theft reduced by 65% across all locations',
-        'Average response time under 3 minutes',
-        'ROI achieved within 8 months',
-        'Staff confidence and safety improved significantly'
+        'Complete property coverage with strategically positioned cameras',
+        'All cabling concealed maintaining property aesthetics',
+        'Installation completed on schedule with minimal disruption',
+        'Remote access via smartphone app for comprehensive monitoring'
       ],
-      slug: 'retail-chain-security'
+      slug: 'luxury-home-security-estate'
     },
     {
       id: 5,
@@ -189,7 +186,7 @@ const projects = [
       location: 'Bath, Somerset',
       category: 'residential',
       date: 'November 2023',
-      client: 'Private Estate',
+
       image: 'INETFS/IMG_2166.jpg',
       systems: ['Number Plate Recognition', 'Automated Gates', 'Intercom System', 'Access Control'],
       description: 'Advanced gate security system with automatic number plate recognition and visitor management for luxury residential estate.',
@@ -209,7 +206,7 @@ const projects = [
       location: 'Hereford, Herefordshire',
       category: 'industrial',
       date: 'October 2023',
-      client: 'Herefordshire Manufacturing Co.',
+
       image: 'INETFS/IMG_2170.jpg',
       systems: ['Fire Suppression', 'Gas Detection', 'Emergency Systems', 'Process Safety'],
       description: 'Critical safety systems for chemical manufacturing facility with hazard monitoring and automated response.',
@@ -226,10 +223,10 @@ const projects = [
     {
       id: 7,
       title: 'Warehouse Goods Security',
-      location: 'Bristol, Somerset',
+      location: 'Ledbury, Herefordshire',
       category: 'industrial',
       date: 'September 2023',
-      client: 'Southwest Distribution Ltd',
+
       image: 'INETFS/IMG_2202.jpg',
       systems: ['Perimeter Monitoring', 'Remote CCTV', 'Access Control', 'Thermal Detection'],
       description: 'Comprehensive security solution for major distribution center handling high-value electronics and consumer goods.',
@@ -245,23 +242,22 @@ const projects = [
     },
     {
       id: 8,
-      title: 'Heritage Building Protection',
-      location: 'Bath, Somerset',
+      title: 'Care Home Safety Installation',
+      location: 'Leominster, Herefordshire',
       category: 'commercial',
       date: 'August 2023',
-      client: 'Bath Heritage Trust',
       image: 'INETFS/IMG_2169.jpg',
-      systems: ['Discrete Fire Detection', 'Heritage-Compliant CCTV', 'Environmental Monitoring', 'Visitor Safety'],
-      description: 'Sensitive installation in Grade I listed building requiring heritage-compliant security and fire safety systems.',
-      challenge: 'Grade I listed Georgian building housing museum needed modern fire and security systems while preserving historical integrity and meeting strict heritage guidelines.',
-      solution: 'Developed bespoke heritage-compliant detection systems with discrete sensors, wireless technology to avoid structural alterations, and environmental monitoring to protect artifacts.',
+      systems: ['Fire Detection', 'Nurse Call Integration', 'CCTV Monitoring', 'Emergency Response'],
+      description: 'Comprehensive fire and security system for residential care facility with specialized resident safety features.',
+      challenge: 'Care home facility required fire detection and security systems that prioritized resident safety while integrating with existing nurse call systems and ensuring staff could respond quickly to emergencies.',
+      solution: 'Installed integrated fire detection with visual and audible alerts, CCTV monitoring in common areas, and emergency response systems linked to the nurse call network for coordinated staff response.',
       results: [
-        'Full heritage compliance achieved',
-        'Advanced artifact protection implemented',
-        'Visitor safety enhanced without visual impact',
-        'Recognized by English Heritage as best practice'
+        'Seamless integration with existing nurse call systems',
+        'Enhanced emergency response coordination',
+        'Staff training completed for all shifts',
+        'Improved safety monitoring in communal areas'
       ],
-      slug: 'heritage-building-protection'
+      slug: 'care-home-safety-installation'
     }
   ];
 

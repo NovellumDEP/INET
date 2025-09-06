@@ -1,7 +1,7 @@
 // src/components/Services.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Shield, Flame, Eye, Lock, Siren, Zap, Network, DoorOpen } from 'lucide-react';
+import { Shield, Flame, Eye, Lock, Siren, Zap, Network, DoorOpen, FileText, Target } from 'lucide-react';
 import './styles/hero-servicelist.css';
 
 // ImageKit configuration
@@ -119,6 +119,22 @@ const Services = () => {
     },
     {
       id: 2,
+      title: "Fire Extinguisher Services",
+      description: "Complete fire extinguisher servicing including annual inspections, weighing, pressure testing, and replacement to ensure compliance.",
+      icon: Target,
+      image: "INETFS/Fext.jpg",
+      slug: "fire-extinguisher-services"
+    },
+    {
+      id: 3,
+      title: "Fire Risk Assessments",
+      description: "Professional fire risk assessments to identify potential hazards and ensure your premises comply with fire safety regulations.",
+      icon: FileText,
+      image: "INETFS/FRA.png",
+      slug: "fire-risk-assessments"
+    },
+    {
+      id: 4,
       title: "CCTV Surveillance",
       description: "High-definition surveillance cameras with remote monitoring and cloud storage for complete security coverage.",
       icon: Eye,
@@ -126,7 +142,7 @@ const Services = () => {
       slug: "cctv-surveillance"
     },
     {
-      id: 3,
+      id: 5,
       title: "Access Control",
       description: "Secure entry systems including key cards, biometric scanners, and smart locks for controlled access.",
       icon: Lock,
@@ -134,7 +150,7 @@ const Services = () => {
       slug: "access-control"
     },
     {
-      id: 4,
+      id: 6,
       title: "Intruder Alarms",
       description: "Motion sensors and perimeter protection with instant alerts to keep unauthorized visitors out.",
       icon: Shield,
@@ -142,28 +158,28 @@ const Services = () => {
       slug: "intruder-alarms"
     },
     {
-      id: 5,
+      id: 7,
+      title: "Gate & Barrier Automation",
+      description: "Automated gate and barrier systems for secure, controlled access and efficient traffic management across residential and commercial properties.",
+      icon: DoorOpen,
+      image: "INETFS/IMG_2222.jpg",
+      slug: "gate-barrier-automation"
+    },
+    {
+      id: 8,
+      title: "Networking",
+      description: "Reliable networking infrastructure and system connectivity to support seamless communication, monitoring, and integration of security and fire systems.",
+      icon: Network,
+      image: "INETFS/IMG_2228.jpeg",
+      slug: "networking"
+    },
+    {
+      id: 9,
       title: "Maintenance & Support",
       description: "24/7 call-out service for system breakdowns, repairs, and ongoing maintenance to keep your security systems running.",
       icon: Siren,
       image: "INETFS/cam.jpg",
       slug: "maintenance-support"
-    },
-    {
-      id: 6,
-      title: "Gate & Barrier automation",
-      description: "Automated gate and barrier systems for secure, controlled access and efficient traffic management across residential and commercial properties.",
-      icon: DoorOpen,
-      image: "INETFS/IMG_2222.jpg",
-      slug: "electrical-safety"
-    },
-     {
-      id: 7,
-      title: "Networking",
-      description: "Reliable networking infrastructure and system connectivity to support seamless communication, monitoring, and integration of security and fire systems.",
-      icon: Network,
-      image: "INETFS/IMG_2228.jpeg",
-      slug: "electrical-safety"
     }
   ];
 

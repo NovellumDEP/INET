@@ -16,7 +16,10 @@ import {
   X,
   Info,
   ArrowRight,
-  Network
+  Network,
+  Target,
+  FileText,
+  Siren
 } from 'lucide-react';
 import PrimaryButton from '../components/buttons/PrimaryButton';
 import './styles/services.css';
@@ -135,18 +138,18 @@ const ServicesPage = () => {
   ];
 
   // Simple, clean service list
- const services = [
+const services = [
  {
-   id: 'commercial-fire',
+   id: 'fire-detection',
    number: '01',
-   title: 'Commercial Fire Services',
-   description: 'Complete fire detection and suppression systems for offices, retail, and commercial properties.',
+   title: 'Fire Detection Systems',
+   description: 'Advanced smoke and heat detection systems with 24/7 monitoring to protect your property from fire damage.',
    icon: Flame,
    features: [
-     'Fire Detection Systems',
-     'Suppression Systems', 
-     'Emergency Lighting',
-     'Fire Risk Assessments',
+     'Smoke Detection',
+     'Heat Detection', 
+     'Manual Call Points',
+     'Fire Alarm Panels',
      'BS 5839 Compliance',
      '24/7 Monitoring'
    ],
@@ -154,8 +157,8 @@ const ServicesPage = () => {
      design: [
        'Comprehensive Fire Risk Assessment',
        'BS 5839 Compliant System Design',
-       'Cause & Effect Programming Design',
-       'Emergency Evacuation Planning',
+       'Zone Planning & Configuration',
+       'Device Positioning Strategy',
        'Integration with Building Systems',
        'Regulatory Compliance Verification'
      ],
@@ -163,12 +166,12 @@ const ServicesPage = () => {
        'Certified Fire Technician Installation',
        'Fire-Rated Cable Installation',
        'Professional Panel Programming',
-       'Zone Configuration & Setup',
-       'Device Addressing & Testing',
-       'System Integration'
+       'Device Installation & Addressing',
+       'System Integration',
+       'Quality Assurance Testing'
      ],
      commissioning: [
-       'Full Fire System Testing',
+       'Full System Testing',
        'Individual Device Verification',
        'False Alarm Prevention Setup',
        'Fire Brigade Liaison',
@@ -176,166 +179,264 @@ const ServicesPage = () => {
        'Handover Documentation'
      ],
      maintenance: [
-       'Annual Fire System Servicing',
+       'Annual System Servicing',
        'Quarterly Safety Inspections',
-       '24/7 Emergency Fire Callout',
-       'Fire Certificate Provision',
+       '24/7 Emergency Callout',
        'Compliance Documentation',
-       'System Upgrades'
+       'System Upgrades',
+       'Performance Monitoring'
      ]
    }
  },
  {
-   id: 'commercial-security',
+   id: 'fire-extinguisher-services',
    number: '02',
-   title: 'Commercial Security Services',
-   description: 'Advanced CCTV, access control, and intruder alarm systems for business protection.',
-   icon: Building,
+   title: 'Fire Extinguisher Services',
+   description: 'Complete fire extinguisher servicing including annual inspections, weighing, pressure testing, and replacement to ensure compliance.',
+   icon: Target,
    features: [
-     'CCTV Surveillance',
-     'Access Control Systems',
-     'Intruder Alarms',
+     'Annual Inspections',
+     'Pressure Testing',
+     'Weighing Services',
+     'Extinguisher Replacement',
+     'Compliance Certification',
+     'Emergency Supply'
+   ],
+   processDetails: {
+     design: [
+       'Site Fire Risk Assessment',
+       'Extinguisher Type Selection',
+       'Placement Strategy Planning',
+       'Quantity Requirements Analysis',
+       'Compliance Standards Review',
+       'Maintenance Schedule Planning'
+     ],
+     installation: [
+       'Professional Extinguisher Placement',
+       'Wall Mounting & Signage',
+       'Fire Point Setup',
+       'Safety Equipment Installation',
+       'Compliance Labeling',
+       'Site Documentation'
+     ],
+     commissioning: [
+       'Initial Pressure Testing',
+       'Weight Verification',
+       'Compliance Certification',
+       'Staff Training Sessions',
+       'Emergency Procedures Training',
+       'Documentation Handover'
+     ],
+     maintenance: [
+       'Annual Service & Inspection',
+       'Pressure Testing & Recharging',
+       'Weight Monitoring',
+       'Replacement When Required',
+       'Compliance Certificate Updates',
+       'Emergency Callout Service'
+     ]
+   }
+ },
+ {
+   id: 'fire-risk-assessments',
+   number: '03',
+   title: 'Fire Risk Assessments',
+   description: 'Professional fire risk assessments to identify potential hazards and ensure your premises comply with fire safety regulations.',
+   icon: FileText,
+   features: [
+     'Comprehensive Risk Analysis',
+     'Hazard Identification',
+     'Compliance Verification',
+     'Action Plan Development',
+     'Legal Documentation',
+     'Regular Review Updates'
+   ],
+   processDetails: {
+     design: [
+       'Initial Site Survey',
+       'Risk Assessment Planning',
+       'Regulatory Requirements Review',
+       'Stakeholder Consultation',
+       'Assessment Methodology Design',
+       'Documentation Framework'
+     ],
+     installation: [
+       'Detailed Site Inspection',
+       'Hazard Identification Process',
+       'Risk Level Assessment',
+       'Evidence Gathering',
+       'Compliance Gap Analysis',
+       'Photographic Documentation'
+     ],
+     commissioning: [
+       'Risk Assessment Report Completion',
+       'Action Plan Development',
+       'Priority Recommendations',
+       'Compliance Certification',
+       'Management Presentation',
+       'Staff Briefing Sessions'
+     ],
+     maintenance: [
+       'Annual Assessment Reviews',
+       'Regulatory Updates Monitoring',
+       'Action Plan Progress Reviews',
+       'Updated Risk Assessments',
+       'Ongoing Compliance Support',
+       'Emergency Consultation'
+     ]
+   }
+ },
+ {
+   id: 'cctv-surveillance',
+   number: '04',
+   title: 'CCTV Surveillance',
+   description: 'High-definition surveillance cameras with remote monitoring and cloud storage for complete security coverage.',
+   icon: Eye,
+   features: [
+     'HD Camera Systems',
      'Remote Monitoring',
-     'Mobile App Control',
-     'Cloud Storage'
+     'Cloud Storage',
+     'Mobile App Access',
+     'Night Vision',
+     'Motion Detection'
    ],
    processDetails: {
      design: [
        'Security Risk Assessment',
        'Coverage Area Analysis',
+       'Camera Positioning Strategy',
        'Network Infrastructure Planning',
-       'Integration Strategy Design',
-       'Scalability Planning',
-       'User Access Planning'
+       'Storage Requirements Analysis',
+       'Integration Planning'
      ],
      installation: [
-       'Professional Security Installation',
+       'Professional Camera Installation',
        'Network Infrastructure Setup',
-       'Camera & Sensor Mounting',
-       'Control Panel Configuration',
-       'Server & Storage Setup',
-       'Mobile App Configuration'
+       'DVR/NVR Configuration',
+       'Cable Management',
+       'Power Supply Installation',
+       'System Integration'
      ],
      commissioning: [
-       'Full System Integration Testing',
        'Image Quality Optimization',
-       'Access Level Configuration',
+       'Motion Detection Setup',
+       'Remote Access Configuration',
        'Mobile App Setup',
-       'Staff Training Program',
-       'Performance Verification'
+       'User Training',
+       'Performance Testing'
      ],
      maintenance: [
        'Regular System Health Checks',
-       'Camera Cleaning & Alignment',
-       'Software Updates & Patches',
-       'Hardware Maintenance',
-       'Storage System Maintenance',
+       'Camera Cleaning & Maintenance',
+       'Software Updates',
+       'Storage Management',
+       'Performance Monitoring',
        'Emergency Support'
      ]
    }
  },
  {
-   id: 'residential-security',
-   number: '03',
-   title: 'Residential Security Services',
-   description: 'Smart home security systems designed for family protection and peace of mind.',
-   icon: Home,
+   id: 'access-control',
+   number: '05',
+   title: 'Access Control',
+   description: 'Secure entry systems including key cards, biometric scanners, and smart locks for controlled access.',
+   icon: Lock,
    features: [
-     'Home Alarm Systems',
-     'Residential CCTV',
-     'Smart Doorbells',
+     'Key Card Systems',
+     'Biometric Scanners',
      'Smart Locks',
-     'Mobile Alerts',
-     'Family-Friendly Design'
+     'Time-Based Access',
+     'Audit Trails',
+     'Remote Management'
    ],
    processDetails: {
      design: [
-       'Home Security Survey',
-       'Family Lifestyle Assessment',
-       'Smart Home Integration Planning',
-       'Aesthetic Considerations',
-       'Pet-Friendly Solutions',
-       'Privacy Considerations'
+       'Access Requirements Analysis',
+       'User Level Planning',
+       'Integration Strategy',
+       'Security Protocol Design',
+       'Hardware Selection',
+       'System Architecture'
      ],
      installation: [
-       'Discreet Home Installation',
-       'WiFi Network Optimization',
-       'Smart Device Configuration',
-       'Minimal Disruption Methods',
-       'Aesthetic Installation',
-       'Family Safety Setup'
+       'Access Control Hardware Installation',
+       'Network Configuration',
+       'Software Setup',
+       'User Database Creation',
+       'Integration Testing',
+       'Security Configuration'
      ],
      commissioning: [
-       'System Performance Testing',
-       'Family Training Session',
-       'Mobile App Setup',
-       'Emergency Procedures Training',
-       'Smart Home Integration',
-       'User-Friendly Configuration'
+       'Access Level Testing',
+       'User Training',
+       'System Integration Verification',
+       'Audit Trail Setup',
+       'Performance Testing',
+       'Documentation Handover'
      ],
      maintenance: [
-       'Annual System Check',
-       'Battery Replacement Service',
-       'Software Updates',
-       'Family Support',
-       'System Optimization',
-       'Seasonal Checks'
+       'Regular System Updates',
+       'User Database Management',
+       'Hardware Maintenance',
+       'Security Monitoring',
+       'Performance Optimization',
+       'Technical Support'
      ]
    }
  },
  {
-   id: 'security-gates',
-   number: '04',
-   title: 'Security Gate Installation',
-   description: 'Automated gates, barriers, and vehicle access control for properties of all sizes.',
-   icon: DoorOpen,
+   id: 'intruder-alarms',
+   number: '06',
+   title: 'Intruder Alarms',
+   description: 'Motion sensors and perimeter protection with instant alerts to keep unauthorized visitors out.',
+   icon: Shield,
    features: [
-     'Automated Gates',
-     'Rising Arm Barriers',
-     'Bollard Systems',
-     'ANPR Integration',
-     'Remote Control',
-     'Safety Systems'
+     'Motion Sensors',
+     'Perimeter Protection',
+     'Instant Alerts',
+     'Remote Monitoring',
+     'Pet-Friendly Options',
+     'Smartphone Integration'
    ],
    processDetails: {
      design: [
-       'Site Access Assessment',
-       'Traffic Flow Analysis',
-       'Safety Requirements Planning',
-       'Ground Works Assessment',
-       'Integration Planning',
-       'Regulatory Compliance'
+       'Security Vulnerability Assessment',
+       'Sensor Placement Planning',
+       'Zone Configuration Design',
+       'Alert Protocol Planning',
+       'Integration Requirements',
+       'False Alarm Prevention'
      ],
      installation: [
-       'Ground Works & Foundations',
-       'Gate & Barrier Installation',
-       'Motor & Control Installation',
-       'Safety System Setup',
-       'Access Control Integration',
+       'Professional Sensor Installation',
+       'Control Panel Setup',
+       'Wireless Configuration',
+       'Zone Programming',
+       'Alert System Setup',
        'Testing & Calibration'
      ],
      commissioning: [
-       'Safety System Testing',
-       'Emergency Override Testing',
-       'Performance Optimization',
-       'User Training',
-       'Remote Control Setup',
-       'Final Safety Checks'
+       'Full System Testing',
+       'Zone Verification',
+       'Alert Testing',
+       'User Code Setup',
+       'Training Sessions',
+       'Performance Validation'
      ],
      maintenance: [
-       'Mechanical System Maintenance',
-       'Motor & Gearbox Service',
-       'Safety System Checks',
-       'Lubrication & Adjustment',
-       'Control System Maintenance',
-       'Emergency Repair Service'
+       'Regular System Checks',
+       'Battery Replacement',
+       'Sensor Calibration',
+       'Software Updates',
+       'False Alarm Analysis',
+       'Emergency Response'
      ]
    }
  },
  {
    id: 'gate-barrier-automation',
-   number: '05',
-   title: 'Gate & Barrier automation',
+   number: '07',
+   title: 'Gate & Barrier Automation',
    description: 'Automated gate and barrier systems for secure, controlled access and efficient traffic management across residential and commercial properties.',
    icon: DoorOpen,
    features: [
@@ -383,7 +484,7 @@ const ServicesPage = () => {
  },
  {
    id: 'networking',
-   number: '06',
+   number: '08',
    title: 'Networking',
    description: 'Reliable networking infrastructure and system connectivity to support seamless communication, monitoring, and integration of security and fire systems.',
    icon: Network,
@@ -427,6 +528,55 @@ const ServicesPage = () => {
        'System Optimization',
        'Technical Support',
        'Emergency Response'
+     ]
+   }
+ },
+ {
+   id: 'maintenance-support',
+   number: '09',
+   title: 'Maintenance & Support',
+   description: '24/7 call-out service for system breakdowns, repairs, and ongoing maintenance to keep your security systems running.',
+   icon: Siren,
+   features: [
+     '24/7 Emergency Callout',
+     'Preventive Maintenance',
+     'System Repairs',
+     'Performance Monitoring',
+     'Technical Support',
+     'Warranty Services'
+   ],
+   processDetails: {
+     design: [
+       'Maintenance Schedule Planning',
+       'Service Requirements Assessment',
+       'Response Time Planning',
+       'Resource Allocation',
+       'Emergency Protocol Design',
+       'Service Level Agreements'
+     ],
+     installation: [
+       'Service Contract Setup',
+       'Remote Monitoring Installation',
+       'Diagnostic Tools Setup',
+       'Emergency Contact Systems',
+       'Service Documentation',
+       'Team Training'
+     ],
+     commissioning: [
+       'Service Process Testing',
+       'Response Time Verification',
+       'Emergency Procedure Testing',
+       'Client Training',
+       'Documentation Handover',
+       'Service Activation'
+     ],
+     maintenance: [
+       'Scheduled Maintenance Visits',
+       'Emergency Response Service',
+       'System Health Monitoring',
+       'Performance Optimization',
+       'Parts Replacement',
+       'Service Reporting'
      ]
    }
  }
